@@ -1,0 +1,540 @@
+*::-webkit-input-placeholder        {color: #666666;	opacity: 1;}
+*:-moz-placeholder                  {color: #666666;	opacity: 1;}
+*::-moz-placeholder                 {color: #666666; opacity: 1;}
+*:-ms-input-placeholder             {color: #666666; opacity: 1;}
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+textarea::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+body{
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+	line-height: 1;
+}
+
+a{
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+}
+
+.text-left{text-align: left;}
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+
+.relative{position: relative;}
+.absolute{position: absolute;}
+.fixed{position: fixed;}
+.static{position: static;}
+
+.null{padding-left: 0; padding-right: 0;}
+.null-left{padding-left: 0;}
+.null-right{padding-right: 0;}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-responsive{
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+.popup{display: none;}
+.popup .popup-title{
+	font-size: 20px;
+	line-height: 1.2;
+	text-align: center;
+	padding: 10px 15px;
+}
+
+/* Селекторы для стилизации форм */
+.form{}
+.form .form-title{}
+.form input[type="text"], .form textarea{}
+.form textarea{}
+.form input[type="text"]:focus, .form textarea:focus{}
+.form input[type="submit"], .form input[type="reset"]{}
+.form input[type="submit"]:hover, .form input[type="reset"]:hover{}
+.form label{}
+.form label.error{}
+
+/* Селекторы для стилизации контента */
+.content h1, .content h2, .content h3{}
+.content h1{}
+.content h2{}
+.content h3{}
+.content p{}
+.content strong{}
+.content em{}
+.content a{}
+.content a:hover{}
+.content img{}
+.content table{}
+.content table tr th, .content table tr td{}
+.content table tr td{}
+.content ul, .content ol{}
+.content ul li .content ol li{}
+
+.slider .item.item-1{
+	background: url(../images/slide-1.png) center bottom no-repeat;
+	background-size: cover;
+}
+.slider .flex-container{
+	height: 100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slider .flex-container .flex-item{
+	width: 100%;
+}
+.slider .title{
+	font-family: "RobotoBold", sans-serif;
+	font-size: 52px;
+	line-height: 1.4;
+	color: #ffffff;
+	text-align: center;
+}
+.slider .title span{
+	display: block;
+	font-size: 36px;
+	font-weight: normal;
+}
+.slider .text{
+	font-family: "RobotoLight", sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	color: #ffffff;
+	text-align: center;
+	padding: 15px 0 45px;
+}
+
+.button{
+	font-family: "RobotoBold", sans-serif;
+	display: block;
+	background: #998675;
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 3px;
+	border-bottom: 3px solid #736357;
+	padding: 18px 0;
+}
+.button:hover{
+	background: #736357;
+	border-bottom-color: #52443a;
+}
+
+
+header{
+	display: none;
+	position: fixed;
+	width: 100%;
+	top: 40px;
+	left: 0;
+	z-index: 100;
+}
+.logo{
+	display: block;
+}
+.logo img, .logo span{
+	display: inline-block;
+	font-size: 34px;
+	color: #ffffff;
+	vertical-align: middle; /* Выравнивание по вертикали */
+}
+
+.menu > ul{
+	text-align: right;
+	padding: 20px 0;
+}
+.menu > ul > li{
+	display: inline-block;
+	margin-left: 30px;
+}
+.menu > ul > li > a{
+	font-family: "RobotoLight", sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+}
+.menu > ul > li.active > a, .menu > ul > li:hover > a{
+	color: #c7b299;
+}
+
+.services{
+	padding: 80px 0;
+}
+.services .item{
+	text-align: center;
+}
+.services .item .title{
+	font-family: "RobotoMedium", sans-serif;
+	font-size: 22px;
+	line-height: 1.2;
+	color: #555555;
+	padding: 10px 0;
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+}
+.services .item .text{
+	font-size: 14px;
+	line-height: 1.4;
+	color: #8c8c8c;
+	padding-bottom: 25px;
+	background: url(../images/line.png) center bottom no-repeat;
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+}
+.services .item:hover .title{color: #c7b299;}
+.services .item:hover .text{background-image: url(../images/line-hover.png);}
+
+.section-title{
+	font-family: "RobotoMedium", sans-serif;
+	font-size: 30px;
+	line-height: 1.2;
+	color: #555555;
+	text-align: center;
+	padding: 80px 0 15px;
+}
+.section-text{
+	font-size: 16px;
+	line-height: 1.4;
+	color: #8c8c8c;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.idea{
+	background: #fbfaf8;
+}
+.idea .browser{
+	position: relative;
+	height: 485px;
+}
+.idea .browser img{
+	position: absolute;
+}
+.idea .browser .left{
+	bottom: 0;
+	left: 0;
+}
+.idea .browser .center{
+	bottom: 0;
+	left: 50%;
+	margin-left: -385px;
+	z-index: 10;
+}
+.idea .browser .right{
+	right: 0;
+	bottom: 0;
+}
+
+.purchase{
+	padding: 45px 0;
+	background: linear-gradient(to right, #231c1a, #4d3327);
+}
+.purchase .purchase-title{
+	font-size: 28px;
+	line-height: 1.2;
+	color: #ffffff;
+}
+.purchase .purchase-title span{color: #c7b299;}
+.purchase .purchase-text{
+	font-size: 18px;
+	line-height: 1.2;
+	color: #615855;
+}
+
+.projects .tags{text-align: center; margin-bottom: 40px;}
+.projects .tags button{
+	font-family: "RobotoLight", sans-serif;
+	font-size: 14px;
+	color: #8c8c8c;
+	display: inline-block;
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 3px;
+	padding: 7px 20px;
+	margin: 0 3px;
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+}
+.projects .tags button.active, .projects .tags button:hover{
+	background: #998675;
+	color: #ffffff;
+}
+
+.projects .item{
+	position: relative;
+	margin-bottom: 30px;
+}
+.projects .item .description{
+	background: #fbfaf8;
+	padding: 25px 30px;
+	position: relative;
+	z-index: 10;
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+}
+.projects .item .description:before{
+	content: "";
+	border: 15px solid transparent;
+	border-bottom-color: #fbfaf8;
+	position: absolute;
+	top: -30px;
+	left: 20px;
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+}
+.projects .item .description .title{
+	font-family: "RobotoMedium", sans-serif;
+	font-size: 20px;
+	line-height: 1.4;
+	color: #c7b299;
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+}
+.projects .item .description .text{
+	font-family: "RobotoLight", sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #d1d1d1;
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+}
+.projects .item .cover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, .5);
+	opacity: 0;
+	-webkit-transition: all ease-in .2s;
+	-o-transition: all ease-in .2s;
+	transition: all ease-in .2s;
+	text-align: center;
+}
+.projects .item .cover a{
+	display: inline-block;
+	font-size: 32px;
+	color: #ffffff;
+	padding-top: 100px;
+	margin: 0 15px;
+}
+.projects .item .cover a:hover{color: #c7b299;}
+.projects .item:hover .cover{
+	opacity: 1;
+}
+.projects .item:hover .description{background: #362f2d;}
+.projects .item:hover .description:before{border-bottom-color: #362f2d;}
+.projects .item:hover .description .title{color: #ffffff;}
+.projects .item:hover .description .text{color: #c7b299;}
+.projects .button{
+	margin: 10px 0 80px;
+}
+
+.statistic{
+	background: linear-gradient(to right, #231c1a, #4d3327);
+	text-align: center;
+	padding: 65px 0 60px;
+}
+.statistic .number{
+	font-family: "RobotoLight", sans-serif;
+	font-size: 48px;
+	color: #ffffff;
+	padding-top: 20px;
+}
+.statistic .number span{
+	display: block;
+	font-size: 14px;
+	color: #c7b299;
+	padding: 10px 0 20px;
+	background: url(../images/lines.png) center bottom no-repeat;
+}
+
+footer .top{
+	background: #191919;
+	padding: 75px 0;
+}
+footer .top .text{
+	font-size: 14px;
+	line-height: 1.4;
+	color: #555555;
+	padding: 15px 0;
+}
+footer .top a{
+	font-size: 14px;
+	line-height: 1.4;
+	color: #ffffff;
+}
+footer .top a i{padding-left: 5px;}
+footer .top a:hover{color: #555555;}
+
+footer .title{
+	font-family: "RobotoBold", sans-serif;
+	font-size: 24px;
+	color: #ffffff;
+	padding-bottom: 20px;
+}
+
+footer .post{}
+footer .post .item{
+	display: block;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #555555;
+	padding-bottom: 15px;
+}
+footer .post .item .date{
+	font-family: "RobotoLight", sans-serif;
+	font-size: 12px;
+	line-height: 1.4;
+	color: #363636;
+	display: block;
+}
+footer .post .item .desc{
+	font-size: 14px;
+	line-height: 1.4;
+	color: #555555;
+	display: block;
+}
+footer .post .item:last-child .desc{
+	border-bottom: none;
+}
+footer .post .item:hover .date{color: #ffffff;}
+footer .post .item:hover .desc{color: #c7b299;}
+footer .post .item .desc i{color: #00bff3; font-style: normal; padding: 0;}
+footer .bottom{
+	background: #111111;
+	padding: 40px 0;
+}
+footer .bottom .copy, footer .bottom-menu{
+	display: inline-block;
+}
+footer .bottom .copy{
+	font-size: 13px;
+	line-height: 1.2;
+	color: #555555;
+	padding-right: 15px;
+}
+footer .bottom .copy span{
+	color: #959595;
+}
+footer .bottom-menu li{
+	display: inline-block;
+}
+footer .bottom-menu li a{
+	display: block;
+	font-size: 13px;
+	line-height: 1.2;
+	color: #555555;
+	padding: 0 10px;
+	border-left: 1px solid #555555;
+}
+footer .bottom-menu li a:hover{color: #c7b299;}
+footer .author{
+	display: inline-block;
+	font-size: 13px;
+	line-height: 1.2;
+	color: #555555;
+	padding: 0 10px;
+	border-right: 1px solid #555555;
+}
+footer .author span{color: #c7b299;}
+footer .author:last-child{border-right: none; padding-right: 0;}
+.video{
+	background: url(../images/video.png) center bottom no-repeat;
+	background-size: cover;
+	height: 705px;
+}
+.purchase .purchase-title{
+	font-size: 28px;
+	line-height: 1.2;
+	color: #ffffff;
+}
+.video .video-title{
+	font-family: "Raleway Medium", sans-serif;
+	font-size: 30px;
+	line-height: 1.2;
+	color: #ffffff;
+	padding: 350px 0 10px;
+	text-align: center;
+
+}
+.video .video-text{
+	font-family: "Raleway Medium", sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #ffffff;
+	padding: 0 0 260px;
+	text-align: center;
+}
+.video .layer{
+	display: block;
+	background: url("../images/layer2.png") center bottom no-repeat;
+	width: 100px;
+	padding: 310px 0 0 0;
+	height: 100px;
+	position: absolute;
+}
+.video .face{
+	display: block;
+	background: url("../images/layer1.png") center bottom no-repeat;
+	width: 70px;
+	padding: 295px 0 0 100px;
+	height: 70px;
+	position: absolute;
+}
+.iphone{
+    padding-top: 80px;
+}
+.devices .mobile{
+		padding: 200px 0 0 80px;
+}
+.devices .mobile-title{
+	font-family: "Raleway Medium", sans-serif;
+	font-size: 30px;
+	padding-bottom: 35px;
+}
+.devices .mobile-text{
+	font-family: "Montserrat Light", sans-serif;
+	font-size: 16px;
+	padding-bottom: 70px;
+    line-height: 2.3;
+}
+.devices .mobile-attachment{
+	font-family: "Montserrat Light", sans-serif;
+	font-size: 16px;
+    line-height: 2.3;
+/*    padding-right: ;*/
+}
